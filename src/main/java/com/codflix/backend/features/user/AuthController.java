@@ -69,13 +69,13 @@ public class AuthController {
         }
 
        if (!userDao.insertNewUser(email,hash(password))){
-           return "bad subscription";
+           return "doesn't work";
        }
 
         // Authenticate user
         User user = userDao.getUserByCredentials(email, password);
         if (user == null) {
-            logger.info("User not found. Redirect to login");
+            logger.info("User not found. Redirection to login");
             response.removeCookie("session");
             response.redirect("/login");
             return "KO";
@@ -91,6 +91,12 @@ public class AuthController {
         return "OK";
     }
 
+    /**
+     * Function for logout an user
+     * @param request
+     * @param response
+     * @return
+     */
     public String logout(Request request, Response response) {
         Session session = request.session(false);
         if (session != null) {
@@ -104,7 +110,7 @@ public class AuthController {
     }
 
     /***
-     * Function that hashes a password in sha-256
+     * Function who hashe a password in sha-256
      * @param password of the user
      * @return String of Hashed password
      */

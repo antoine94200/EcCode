@@ -13,7 +13,6 @@ public class Media {
     private String trailerUrl;
     private String imageUrl;
 
-
     public Media(int id, int genreId, String title, String type, String status, Date releaseDate, String summary, String trailerUrl,String imageUrl) {
         this.id = id;
         this.genreId = genreId;

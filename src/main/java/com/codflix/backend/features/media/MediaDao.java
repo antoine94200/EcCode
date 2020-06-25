@@ -99,7 +99,11 @@ public class MediaDao {
     }
 
 
-
+    /**
+     * function who doing the request for get the media
+     * @param id id of the table in the bdd
+     * @return a media
+     */
     public Media getMediaById(int id) {
         Media media = null;
 

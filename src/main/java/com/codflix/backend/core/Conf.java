@@ -11,11 +11,11 @@ public class Conf {
     public static final int HTTP_PORT = 8080;
 
     // Database
-    public static final String DB_HOST = getEnv("CODFLIX_DB_HOST", "localhost:3307");
+    public static final String DB_HOST = getEnv("CODFLIX_DB_HOST", "localhost:8889");
     public static final String DB_NAME = getEnv("CODFLIX_DB_NAME", "codflix");
-    public static final String DB_URL = "jdbc:mysql://" + DB_HOST + "/" + DB_NAME;
-    public static final String DB_USER = getEnv("CODFLIX_DB_USER", "root");
-    public static final String DB_PASSWORD = getEnv("CODFLIX_DB_PASSWORD", "root");
+    public static final String DB_URL = "jdbc:mysql://" + DB_HOST + "/" + DB_NAME + "?serverTimezone=Europe/Paris";
+    public static final String DB_USER = getEnv("CODFLIX_DB_USER", "codflix");
+    public static final String DB_PASSWORD = getEnv("CODFLIX_DB_PASSWORD", "codflix");
 
     // Resources
     public static final File RESOURCES_DIR = new File("src/main/resources");

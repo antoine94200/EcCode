@@ -6,6 +6,12 @@ import com.codflix.backend.models.User;
 import java.sql.*;
 
 public class UserDao {
+    /**
+     * Request who get the mail and password information
+     * @param email
+     * @param password
+     * @return
+     */
     public User getUserByCredentials(String email, String password) {
         User user = null;
 
@@ -27,6 +33,12 @@ public class UserDao {
         return user;
     }
 
+    /**
+     *
+     * @param rs
+     * @return
+     * @throws SQLException
+     */
     private User mapToUser(ResultSet rs) throws SQLException {
         return new User(
                 rs.getInt(1), // id

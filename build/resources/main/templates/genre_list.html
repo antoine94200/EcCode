@@ -1,0 +1,8 @@
+#parse("dashboard.html")
+#@mainLayout()
+Genres !
+
+#foreach($genre in $genres)
+    <div>$genre.getName()</div>
+#end
+#end

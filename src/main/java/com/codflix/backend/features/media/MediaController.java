@@ -44,9 +44,15 @@ public class MediaController {
         return Template.render("media_detail.html", model);
     }
 
+    /**
+     *
+     * @param request the request for the BDD (table media)
+     * @param response the response for the BDD (table media)
+     * @return the html page for the media list
+     */
     public String listGenre(Request request, Response response) {
         List<Media> medias;
-        System.out.println("je passe bien dans listGenre");
+        System.out.println("listGenre ici");
 
         int genre = Integer.parseInt(request.queryParams("genre"));
         System.out.println(genre);
