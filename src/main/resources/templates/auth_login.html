@@ -1,0 +1,48 @@
+#parse("base.html")
+#@mainLayout()
+<div class="landscape">
+    <div class="bg-black">
+        <div class="row no-gutters">
+            <div class="col-md-6 full-height bg-white">
+                <div class="auth-container">
+                    <h2><span>Cod</span>'Flix</h2>
+                    <h3>Connexion</h3>
+
+                    <form method="POST" action="/login" class="custom-form">
+
+                        <div class="form-group">
+                            <label for="email">Adresse email</label>
+                            <input type="email" placeholder="joe@codingfactory.fr" id="email" name="email" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <input type="password" placeholder="Votre mot de passe" id="password" name="password" class="form-control" required>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="submit" name="Valider" class="btn btn-block bg-red" value="Se connecter" />
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="/signup" class="btn btn-block bg-blue">Inscription</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <span class="error-msg">
+
+                        </span>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-6 full-height">
+                <div class="auth-container">
+                    <h1>Heureux de vous revoir !</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+#end

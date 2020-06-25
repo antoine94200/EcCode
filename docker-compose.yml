@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+   db:
+     image: mysql:5.7
+     volumes:
+       - dbdata:/var/lib/mysql
+     ports:
+      - 3307:3306
+     environment:
+       MYSQL_ROOT_PASSWORD: codflix
+       MYSQL_DATABASE: codflix
+       MYSQL_USER: codflix
+       MYSQL_PASSWORD: codflix
+   phpmyadmin:
+     depends_on:
+       - db
+     image: phpmyadmin/phpmyadmin
+     ports:
+       - '9090:80'
+     environment:
+       PMA_HOST: db
+       MYSQL_ROOT_PASSWORD: codflix
+
+volumes:
+  dbdata: {}

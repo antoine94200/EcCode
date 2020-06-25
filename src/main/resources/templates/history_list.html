@@ -1,0 +1,21 @@
+#parse("dashboard.html")
+#@mainLayout()
+
+<h1>
+    Streams History
+</h1>
+
+<div>
+    User: $user.getEmail()
+</div>
+
+<div>
+    <h2>List</h2>
+    <ul>
+
+    #foreach($history in $histories)
+        <li>id: $history.getId(), userId=$history.getUserId(), mediaId=$history.getMediaId()</li>
+    #end
+    </ul>
+</div>
+#end
